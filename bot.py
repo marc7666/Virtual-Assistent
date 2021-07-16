@@ -8,17 +8,16 @@ Chat bot main code
 # Polytecnich school - University of Lleida
 # ****************************************
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
-# ChatterBotCorpusTrainer => It already contains basic information of a ChatBot,
-# so we can have a conversation with our ChatBot
+from chatterbot.trainers import ListTrainer
 
-CHATBOT = ChatBot('Virtual assistent') # Creating a ChatBot
+CHATBOT = ChatBot('Virtual assistant') # Creating a ChatBot
+CHATBOT.storage.drop()
+CONVERSATION = open('knowledge.bc', 'r').readlines()
+TRAINER = ListTrainer(CHATBOT) # This will train the CHATBOT object
 
-TRAINER = ChatterBotCorpusTrainer(CHATBOT) # This will train the CHATBOT object
-
-TRAINER.train('chatterbot.corpus.english') # Training the bot in english
+TRAINER.train(CONVERSATION) # Training the bot with the CONVERSATION list
 
 while True: # Communication flow
     REQUEST = input('Me: ') # Introduced by the user
     ANSWER = CHATBOT.get_response(REQUEST) # Bot's answer
-    print('Virtual assistent: ', ANSWER)
+    print('Virtual assistant: ', ANSWER)

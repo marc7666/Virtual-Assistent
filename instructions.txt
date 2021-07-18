@@ -1,4 +1,4 @@
-******************** USER MANUAL ********************
+**************************************** USER MANUAL ****************************************
 You're going to see the different commands to interact with the ChatBot.
 First, you'll see the commands that you can write and second the answers of the bot.
 
@@ -9,5 +9,12 @@ The program will answer => Hello, welcome to the virtual assistant
 ********** Goodbyes **********
 Bye, See you, See you soon, Bye bye, Good Bye
 The program will answer => See you the next time!
+
+********** Other commands **********
+How can I participate?
+The program will answer => Participate and pay you fines
+
+I want to participate
+The program will answer => Which type of penalty fee do you want to pay?
 
 The program will ask the user which type of penalty fee want to pay and will print the link of the institution

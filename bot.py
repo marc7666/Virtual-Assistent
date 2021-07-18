@@ -27,5 +27,5 @@ while True: # Communication flow
         break
     if str(REUQEST) == "DGT":
         print(colors.color.BLUE + "Acces to the following link: " + colors.color.END)
-        institution = urlib.parse.quote('www.dgt.es/es/')
+        institution = urlib.parse.quote('sede.dgt.gob.es/es/multas/#')
         print("https://" + institution)

@@ -44,19 +44,23 @@ while True:  # Communication flow
             print('Links of Lleida: ')
             print(colors.color.BLUE + "Citizen attention office of Lleida link: " + colors.color.END)
             lleida_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12443')
-            print("http://", lleida_attention)
+            print('http://' + lleida_attention)
             print(colors.color.BLUE + "Territorial traffic service of Lleida link: " + colors.color.END)
             lleida_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10293')
-            print("http://", lleida_service)
+            print('http://' + lleida_service)
         elif str(REQUEST) == "Barcelona":
             print('Links of Barcelona: ')
             print(colors.color.BLUE + "Citizen attention office of Barcelona link: " + colors.color.END)
             barcelona_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=6622')
-            print("http://", barcelona_attention)
+            print('http://' + barcelona_attention)
             print(colors.color.BLUE + "Territorial traffic service of Barcelona link: " + colors.color.END)
             barcelona_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10995')
-            print("http://", barcelona_service)
-
-    # print('Charlie: ', ANSWER)
-    if str(ANSWER).startswith("See"):  # Finish condition
-        break
+            print('http://' + barcelona_service)
+        elif str(REQUEST) == "Tarragona":
+            print('Links of Tarragona: ')
+            print(colors.color.BLUE + "Citizen attention office of Tarragona link: " + colors.color.END)
+            tarragona_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12444')
+            print('http://' + tarragona_attention)
+            print(colors.color.BLUE + "Territorial traffic service of Tarragona link: " + colors.color.END)
+            tarragona_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10996')
+            print('http://' + tarragona_service)

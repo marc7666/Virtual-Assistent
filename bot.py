@@ -48,6 +48,14 @@ while True:  # Communication flow
             print(colors.color.BLUE + "Territorial traffic service of Lleida link: " + colors.color.END)
             lleida_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10293')
             print("http://", lleida_service)
+        elif str(REQUEST) == "Barcelona":
+            print('Links of Barcelona: ')
+            print(colors.color.BLUE + "Citizen attention office of Barcelona link: " + colors.color.END)
+            barcelona_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=6622')
+            print("http://", barcelona_attention)
+            print(colors.color.BLUE + "Territorial traffic service of Barcelona link: " + colors.color.END)
+            barcelona_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10995')
+            print("http://", barcelona_service)
 
     # print('Charlie: ', ANSWER)
     if str(ANSWER).startswith("See"):  # Finish condition

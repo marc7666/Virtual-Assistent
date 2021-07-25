@@ -34,23 +34,22 @@ while True: # Communication flow
     REQUEST = input('Me: ') # Introduced by the user
     ANSWER = CHATBOT.get_response(REQUEST) # Bot's answer
     print('Charlie: ', ANSWER)
-
-    if str(REQUEST)== "Traffic ticket" or str(REQUEST)== "traffic ticket":
-        REQUEST = input('Me: ') # Introduced by the user
-        ANSWER = CHATBOT.get_response(REQUEST) # Bot's answer
+    if str(REQUEST) == "Traffic ticket":
+        REQUEST = input('Me: ')
+        ANSWER = CHATBOT.get_response(REQUEST)
         print('Charlie: ', ANSWER)
-        if str(REQUEST) == "presentially" or str(REQUEST) == "Presentially":
-            REQUEST = input('Me: ') # Introduced by the user
-            ANSWER = CHATBOT.get_response(REQUEST) # Bot's answer
+        if str(ANSWER) == "Yes":
+            REQUEST = input('Me: ')
+            ANSWER = CHATBOT.get_response(REQUEST)
             print('Charlie: ', ANSWER)
-            if str(REQUEST)== "lleida" or str(REQUEST)== "Lleida":
+            if str(REQUEST) == "Presentially":
+                REQUEST = input('Me: ')
+                ANSWER = CHATBOT.get_response(REQUEST)
                 print('Charlie: ', ANSWER)
-                print(colors.color.BLUE + "Citizen attention office of Lleida link: " + colors.color.END)
-                lleida_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12443')
-                print("https://" + lleida_attention)
-                print(colors.color.BLUE + "Territorial traffic servie of Lleida link: " + colors.color.END)
-                lleida_service = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10293')
-                print("https://" + lleida_service)
+                if str(ANSWER) == "Links of Lleida:":
+                    print(colors.color.BLUE + "Citizen attention office of Lleida link: " + colors.color.END)
+                    lleida_attention = urllib.parse.quote('sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12443')
+                    print("https://" + lleida_attention)
 
 
 
@@ -58,3 +57,4 @@ while True: # Communication flow
     #print('Charlie: ', ANSWER)
     if str(ANSWER).startswith("See"): # Finish condition
         break
+        str(ANSWER) == "See you the next time!"

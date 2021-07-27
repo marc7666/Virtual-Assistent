@@ -21,7 +21,7 @@ def print_instructions():
     """
     file = open('instructions.txt', 'r')
     content = file.read()
-    print(colors.color.GREEN + content + colors.color.END)
+    print(colors.Color.GREEN + content + colors.Color.END)
     file.close()
 
 
@@ -31,19 +31,19 @@ def print_phone_information():
     """
     file = open('012_information.txt', 'r')
     content = file.read()
-    print(colors.color.GREEN + content + colors.color.END)
+    print(colors.Color.GREEN + content + colors.Color.END)
     file.close()
 
 
-print(colors.color.YELLOW + "********** Loading all data **********" + colors.color.END)
+print(colors.Color.YELLOW + "********** Loading all data **********" + colors.Color.END)
 CHATBOT = ChatBot('Virtual assistant')  # Creating a ChatBot
 CHATBOT.storage.drop()  # Eliminates the dialog data
 CONVERSATION = open('knowledge.bc', 'r').readlines()
 TRAINER = ListTrainer(CHATBOT)  # This will train the CHATBOT object
 
 TRAINER.train(CONVERSATION)  # Training the bot with the CONVERSATION list
-print(colors.color.CYAN + "Welcome, I'm Charlie and I'm going to be your virtual assistant today."
-      + colors.color.END)
+print(colors.Color.CYAN + "Welcome, I'm Charlie and I'm going to be your virtual assistant today."
+      + colors.Color.END)
 print_instructions()
 while True:  # Communication flow
     REQUEST = input('Me: ')  # Introduced by the user
@@ -54,56 +54,56 @@ while True:  # Communication flow
         ANSWER = CHATBOT.get_response(REQUEST)  # Bot's answer
         print('Charlie: ', ANSWER)
         if str(REQUEST) == "Lleida":
-            print(colors.color.BLUE + "Citizen attention office of Lleida link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Citizen attention office of Lleida link: "
+                  + colors.Color.END)
             LLEIDA_ATTENTION = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12443')
             print('http://' + LLEIDA_ATTENTION)
-            print(colors.color.BLUE + "Territorial traffic service of Lleida link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Territorial traffic service of Lleida link: "
+                  + colors.Color.END)
             LLEIDA_SERVICE = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10293')
             print('http://' + LLEIDA_SERVICE)
         elif str(REQUEST) == "Barcelona":
-            print(colors.color.BLUE + "Citizen attention office of Barcelona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Citizen attention office of Barcelona link: "
+                  + colors.Color.END)
             BARCELONA_ATTENTION = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=6622')
             print('http://' + BARCELONA_ATTENTION)
-            print(colors.color.BLUE + "Territorial traffic service of Barcelona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Territorial traffic service of Barcelona link: "
+                  + colors.Color.END)
             BARCELONA_SERVICE = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10995')
             print('http://' + BARCELONA_SERVICE)
         elif str(REQUEST) == "Tarragona":
-            print(colors.color.BLUE + "Citizen attention office of Tarragona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Citizen attention office of Tarragona link: "
+                  + colors.Color.END)
             TARRAGONA_ATTENTION = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=12444')
             print('http://' + TARRAGONA_ATTENTION)
-            print(colors.color.BLUE + "Territorial traffic service of Tarragona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Territorial traffic service of Tarragona link: "
+                  + colors.Color.END)
             TARRAGONA_SERVICE = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10996')
             print('http://' + TARRAGONA_SERVICE)
         elif str(REQUEST) == "Girona":
-            print(colors.color.BLUE + "Citizen attention office of Girona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Citizen attention office of Girona link: "
+                  + colors.Color.END)
             GIRONA_ATTENTION = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=17461')
             print('http://' + GIRONA_ATTENTION)
-            print(colors.color.BLUE + "Territorial traffic service of Girona link: "
-                  + colors.color.END)
+            print(colors.Color.BLUE + "Territorial traffic service of Girona link: "
+                  + colors.Color.END)
             GIRONA_SERVICE = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=9715')
             print('http://' + GIRONA_SERVICE)
     if str(REQUEST) == "Phone":
-        print(colors.color.BLUE + "Check the 012 opening hours:" + colors.color.END)
+        print(colors.Color.BLUE + "Check the 012 opening hours:" + colors.Color.END)
         OPENING_HOURS = urllib.parse.quote('web.gencat.cat/ca/contacte/012/')
         print('http://' + OPENING_HOURS)
         print_phone_information()
     if str(REQUEST) == "Via internet":
-        print(colors.color.BLUE + "Make the payment with digital certificate" + colors.color.END)
+        print(colors.Color.BLUE + "Make the payment with digital certificate" + colors.Color.END)
         PAY_AND_CERTIFICATE = urllib.parse.quote(
             'identitats.aoc.cat/o/oauth2/auth?response_type=code&client_id=tramits.'
             'transit.cat&redirect_uri=https'
@@ -111,22 +111,22 @@ while True:  # Communication flow
             'autenticacio_usuari&access_type=online'
             '&approval_pompt=false&state=ca_ES')
         print('https://' + PAY_AND_CERTIFICATE)
-        print(colors.color.BLUE + "Make the payment without digital certificate"
-              + colors.color.END)
+        print(colors.Color.BLUE + "Make the payment without digital certificate"
+              + colors.Color.END)
         PAY_WITHOUT_CERTIFICATE = urllib.parse.quote(
             'multestransit.gencat.cat/sctPagaments/AppJava/views/expedients/cerca.'
             'xhtml?set-locale=ca_ES')
         print('https://' + PAY_WITHOUT_CERTIFICATE)
     if str(REQUEST) == "No":
-        print(colors.color.BLUE + "Link of the 'Dirección general de tráfico' web to pay a fine"
-              + colors.color.END)
+        print(colors.Color.BLUE + "Link of the 'Dirección general de tráfico' web to pay a fine"
+              + colors.Color.END)
         DGT = urllib.parse.quote('sede.DGT.gob.es/es/multas/paga-tu-multa/')
         print('https://' + DGT)
     if str(REQUEST) == "I want to present an allegation to a fine":
         print(
-            colors.color.BLUE + "Link of the 'Dirección general de tráfico' web "
+            colors.Color.BLUE + "Link of the 'Dirección general de tráfico' web "
                                 "to present an allegation"
-            + colors.color.END)
+            + colors.Color.END)
         ALLEGATION_DGT = urllib.parse.quote(
             'sede.DGT.gob.es/es/multas/presenta-una-alegacion-o-recurso/')
         print('https://' + ALLEGATION_DGT)

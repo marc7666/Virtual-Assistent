@@ -1,4 +1,19 @@
-class color:
+"""
+Colors
+"""
+
+
+# ****************************************
+# Authorship:
+# Jordi Planes Cid
+# Marc Cervera Rosell
+# Polytecnich school - University of Lleida
+# ****************************************
+# pylint: disable=R0903
+class Color:
+    """
+    This class contains the color codes
+    """
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
     DARKCYAN = '\033[36m'

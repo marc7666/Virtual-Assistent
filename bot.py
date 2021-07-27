@@ -91,5 +91,9 @@ while True:  # Communication flow
         pay_without_certificate = urllib.parse.quote(
             'multestransit.gencat.cat/sctPagaments/AppJava/views/expedients/cerca.xhtml?set-locale=ca_ES')
         print('https://' + pay_without_certificate)
+    if str(REQUEST) == "No":
+        print(colors.color.BLUE + "Link of the 'Dirección general de tráfico' web" + colors.color.END)
+        dgt = urllib.parse.quote('sede.dgt.gob.es/es/multas/paga-tu-multa/')
+        print('https://' + dgt)
     if str(ANSWER) == "See you the next time!":
         break

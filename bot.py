@@ -132,3 +132,4 @@ while True:  # Communication flow
         print('https://' + ALLEGATION_DGT)
     if str(ANSWER) == "See you the next time!":
         break
+f

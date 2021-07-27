@@ -92,8 +92,13 @@ while True:  # Communication flow
             'multestransit.gencat.cat/sctPagaments/AppJava/views/expedients/cerca.xhtml?set-locale=ca_ES')
         print('https://' + pay_without_certificate)
     if str(REQUEST) == "No":
-        print(colors.color.BLUE + "Link of the 'Dirección general de tráfico' web" + colors.color.END)
+        print(colors.color.BLUE + "Link of the 'Dirección general de tráfico' web to pay a fine" + colors.color.END)
         dgt = urllib.parse.quote('sede.dgt.gob.es/es/multas/paga-tu-multa/')
         print('https://' + dgt)
+    if str(REQUEST) == "I want to present an allegation to a fine":
+        print(
+            colors.color.BLUE + "Link of the 'Dirección general de tráfico' web to present an allegation" + colors.color.END)
+        allegation_dgt = urllib.parse.quote('sede.dgt.gob.es/es/multas/presenta-una-alegacion-o-recurso/')
+        print('https://' + allegation_dgt)
     if str(ANSWER) == "See you the next time!":
         break

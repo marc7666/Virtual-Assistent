@@ -80,5 +80,16 @@ while True:  # Communication flow
         opening_hours = urllib.parse.quote('web.gencat.cat/ca/contacte/012/')
         print('http://' + opening_hours)
         print_phone_information()
+    if str(REQUEST) == "Via internet":
+        print(colors.color.BLUE + "Make the payment with digital certificate" + colors.color.END)
+        pay_and_certificate = urllib.parse.quote(
+            'identitats.aoc.cat/o/oauth2/auth?response_type=code&client_id=tramits.transit.cat&redirect_uri=https'
+            '://multestransit.gencat.cat/sctPagaments/AppJava/loginIdCat&scope=autenticacio_usuari&access_type=online'
+            '&approval_pompt=false&state=ca_ES')
+        print('https://' + pay_and_certificate)
+        print(colors.color.BLUE + "Make the payment without digital certificate" + colors.color.END)
+        pay_without_certificate = urllib.parse.quote(
+            'multestransit.gencat.cat/sctPagaments/AppJava/views/expedients/cerca.xhtml?set-locale=ca_ES')
+        print('https://' + pay_without_certificate)
     if str(ANSWER) == "See you the next time!":
         break

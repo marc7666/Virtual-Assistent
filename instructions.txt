@@ -10,11 +10,27 @@ The program will answer => Hello, welcome to the virtual assistant
 Bye, See you, See you soon, Bye bye, Good Bye
 The program will answer => See you the next time!
 
-********** Other commands **********
-How can I participate?
-The program will answer => Participate and pay you fines
+To start interacting with the bot you have to specify what do you want. You can pay a fine or present an allegation.
+Use one of this commands, as you need:
+-> I want to pay a fine
+-> I want to present an allegation to a fine
 
-I want to participate
-The program will answer => Which type of penalty fee do you want to pay?
+When the bot asks you which type of fine do you want to pay:
+-> Traffic ticket
+-> ...
 
-The program will ask the user which type of penalty fee want to pay and will print the link of the institution
+********** Traffic tickets **********
+First of all, Charlie will ask if you live in Catalonia. You can answer:
+-> Yes
+-> No
+
+If the answer of the previous question is 'Yes', Charlie will ask the payment way. There are three options:
+-> In person
+-> Phone
+-> Via internet
+
+In case to choose the way 'In person', Charlie will request in which province do you live. You just have to choose one of the catalan provinces.
+-> Lleida
+-> Barcelona
+-> Girona
+-> Tarragona

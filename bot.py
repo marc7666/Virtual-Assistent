@@ -97,12 +97,12 @@ while True:  # Communication flow
             GIRONA_SERVICE = urllib.parse.quote(
                 'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=9715')
             print('http://' + GIRONA_SERVICE)
-    if str(REQUEST) == "Phone":
+    if str(REQUEST) == "Phone":  # This way is only available in Catalonia
         print(colors.Color.BLUE + "Check the 012 opening hours:" + colors.Color.END)
         OPENING_HOURS = urllib.parse.quote('web.gencat.cat/ca/contacte/012/')
         print('http://' + OPENING_HOURS)
         print_phone_information()
-    if str(REQUEST) == "Via internet":
+    if str(REQUEST) == "Via internet":  # This way is for persons who live in Catalonia
         print(colors.Color.BLUE + "Make the payment with digital certificate" + colors.Color.END)
         PAY_AND_CERTIFICATE = urllib.parse.quote(
             'identitats.aoc.cat/o/oauth2/auth?response_type=code&client_id=tramits.'
@@ -117,7 +117,7 @@ while True:  # Communication flow
             'multestransit.gencat.cat/sctPagaments/AppJava/views/expedients/cerca.'
             'xhtml?set-locale=ca_ES')
         print('https://' + PAY_WITHOUT_CERTIFICATE)
-    if str(REQUEST) == "No":
+    if str(REQUEST) == "No":  # Persons who not live in Catalonia
         print(colors.Color.BLUE + "Link of the 'Dirección general de tráfico' web to pay a fine"
               + colors.Color.END)
         DGT = urllib.parse.quote('sede.DGT.gob.es/es/multas/paga-tu-multa/')

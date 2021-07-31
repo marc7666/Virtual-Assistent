@@ -42,9 +42,11 @@ CONVERSATION = open('knowledge.bc', 'r').readlines()
 TRAINER = ListTrainer(CHATBOT)  # This will train the CHATBOT object
 
 TRAINER.train(CONVERSATION)  # Training the bot with the CONVERSATION list
+print_instructions()
 print(colors.Color.CYAN + "Welcome, I'm Charlie and I'm going to be your virtual assistant today."
       + colors.Color.END)
-print_instructions()
+print(colors.Color.PURPLE + "REMEMBER THAT THIS IS NOT AN IGNORE CASE PROGRAM!! "
+                            "WRITE THE COMMANDS AS IN THE USER MANUAL ARE" + colors.Color.END)
 while True:  # Communication flow
     REQUEST = input('Me: ')  # Introduced by the user
     ANSWER = CHATBOT.get_response(REQUEST)  # Bot's answer
@@ -130,5 +132,11 @@ while True:  # Communication flow
         ALLEGATION_DGT = urllib.parse.quote(
             'sede.DGT.gob.es/es/multas/presenta-una-alegacion-o-recurso/')
         print('https://' + ALLEGATION_DGT)
+    if str(REQUEST) == "Town hall taxes and fines":  # The link of the town hall can be changed
+        print(colors.Color.BLUE + "Link of the tributary service of Lleida town hall"
+              + colors.Color.END)
+        TOWN_HALL = urllib.parse.quote('ajuntamentlleida.tributoslocales.es'
+                                       '/ovt/EXPE/251203/ALLEIDA/noauth/cobro')
+        print('https://' + TOWN_HALL)
     if str(ANSWER) == "See you the next time!":
         break

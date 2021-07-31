@@ -7,19 +7,20 @@ Hi, Hello, Hey man, What's up? Good to see you
 The program will answer => Hello, welcome to the virtual assistant
 
 ********** Goodbyes **********
-Bye, See you, See you soon, Bye bye, Good Bye
+Bye, See you, See you soon, Bye bye, Goodbye
 The program will answer => See you the next time!
 
 To start interacting with the bot you have to specify what do you want. You can pay a fine or present an allegation.
-Use one of this commands, as you need:
+Use one of these commands, as you need:
 -> I want to pay a fine
 -> I want to present an allegation to a fine
+-> Town hall taxes and fines
 
 When the bot asks you which type of fine do you want to pay:
 -> Traffic ticket
 -> ...
 
-********** Traffic tickets **********
+********** Traffic fine **********
 First of all, Charlie will ask if you live in Catalonia. You can answer:
 -> Yes
 -> No
@@ -34,3 +35,8 @@ In case to choose the way 'In person', Charlie will request in which province do
 -> Barcelona
 -> Girona
 -> Tarragona
+
+********** Town hall taxes and fines **********
+You can to pay any tax or fine imposed by the town hall of your city.
+When you press the return key, Charlie will print the link of your town hall
+(The default town hall is Lleida)

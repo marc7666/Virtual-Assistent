@@ -48,6 +48,7 @@ print(colors.Color.CYAN + "Welcome, I'm Charlie and I'm going to be your virtual
 print(colors.Color.PURPLE + "REMEMBER THAT THIS IS NOT AN IGNORE CASE PROGRAM!! "
                             "WRITE THE COMMANDS AS IN THE USER MANUAL ARE" + colors.Color.END)
 while True:  # Communication flow
+    print(colors.Color.PURPLE + "IMPORTANT!!!! THE DEFAULT LANGUAGE FOR THE PAGES IS CATALAN")
     REQUEST = input('Me: ')  # Introduced by the user
     ANSWER = CHATBOT.get_response(REQUEST)  # Bot's answer
     print('Charlie: ', ANSWER)

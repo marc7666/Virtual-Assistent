@@ -11,7 +11,6 @@ import urllib.parse
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import colors
-from Pictures import pictures_Lleida
 
 
 # ******************* Auxiliar methods zone *******************
@@ -146,6 +145,6 @@ while True:  # Communication flow
         TOURISM_OFFICE = urllib.parse.quote('www.turismedelleida.cat/')
         print('https://' + TOURISM_OFFICE)
         print(colors.Color.YELLOW + "Most important places of Lleida" + colors.Color.END)
-        pictures_Lleida.print_pictures()
+        ################
     if str(ANSWER) == "See you the next time!":
         break

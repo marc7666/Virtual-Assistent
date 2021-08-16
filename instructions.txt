@@ -43,5 +43,11 @@ When you press the return key, Charlie will print the link of your town hall
 (The default town hall is Lleida)
 
 ********** Sightseeing **********
-Whe the user indicates that he/she wants to go sightseeing, Charlie will print the tourism office link and will
-show the most iconic places of the city
+When the user indicates that he/she wants to go sightseeing, Charlie will print the tourism office link and will
+show the most iconic places of the city.
+The name of the location is at the bottom left.
+To pass to the next picture click on the screen (inside the image window).
+IMPORTANT NOTE: TO BE AVAILABLE TO SEE THE PICTURES THE COMPUTES MUST HAVE INSTALLED 'FIM' LIBRARY.
+If the computer doesn't have it, use this command to install it:
+$ sudo apt install fim
+The command works for Ubuntu operating systems.

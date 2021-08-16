@@ -15,10 +15,11 @@ Use one of these commands, as you need:
 -> I want to pay a fine
 -> I want to present an allegation to a fine
 -> Town hall taxes and fines
+-> I want to go sightseeing
 
 When the bot asks you which type of fine do you want to pay:
 -> Traffic ticket
--> ...
+-> Town hall taxes and fines
 
 ********** Traffic fine **********
 First of all, Charlie will ask if you live in Catalonia. You can answer:
@@ -40,3 +41,7 @@ In case to choose the way 'In person', Charlie will request in which province do
 You can to pay any tax or fine imposed by the town hall of your city.
 When you press the return key, Charlie will print the link of your town hall
 (The default town hall is Lleida)
+
+********** Sightseeing **********
+Whe the user indicates that he/she wants to go sightseeing, Charlie will print the tourism office link and will
+show the most iconic places of the city

@@ -11,6 +11,7 @@ import urllib.parse
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import colors
+from Pictures import pictures_Lleida
 
 
 # ******************* Auxiliar methods zone *******************
@@ -47,8 +48,9 @@ print(colors.Color.CYAN + "Welcome, I'm Charlie and I'm going to be your virtual
       + colors.Color.END)
 print(colors.Color.PURPLE + "REMEMBER THAT THIS IS NOT AN IGNORE CASE PROGRAM!! "
                             "WRITE THE COMMANDS AS IN THE USER MANUAL ARE" + colors.Color.END)
+print(colors.Color.PURPLE + "IMPORTANT!!!! THE DEFAULT LANGUAGE FOR THE PAGES IS CATALAN"
+      + colors.Color.END)
 while True:  # Communication flow
-    print(colors.Color.PURPLE + "IMPORTANT!!!! THE DEFAULT LANGUAGE FOR THE PAGES IS CATALAN")
     REQUEST = input('Me: ')  # Introduced by the user
     ANSWER = CHATBOT.get_response(REQUEST)  # Bot's answer
     print('Charlie: ', ANSWER)
@@ -139,5 +141,11 @@ while True:  # Communication flow
         TOWN_HALL = urllib.parse.quote('ajuntamentlleida.tributoslocales.es'
                                        '/ovt/EXPE/251203/ALLEIDA/noauth/cobro')
         print('https://' + TOWN_HALL)
+    if str(REQUEST) == "I want to go sightseeing":
+        print(colors.Color.BLUE + "Link to the Lleida tourist office" + colors.Color.END)
+        TOURISM_OFFICE = urllib.parse.quote('www.turismedelleida.cat/')
+        print('https://' + TOURISM_OFFICE)
+        print(colors.Color.YELLOW + "Most important places of Lleida" + colors.Color.END)
+        pictures_Lleida.print_pictures()
     if str(ANSWER) == "See you the next time!":
         break

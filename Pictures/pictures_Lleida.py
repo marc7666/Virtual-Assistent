@@ -1,15 +1,22 @@
 from PIL import Image
-import matplotlib.pyplot as plt
+import os
 
 import colors
 
 
 def print_pictures():
-    OLD_CATHEDRAL = Image.open("Seu Vella.jpg")
+    dir = '/home/marc/Escritorio/Virtual-Assistent/Pictures'
+    imgList = os.listdir('/home/marc/Escritorio/Virtual-Assistent/Pictures')
+    imgList.sort(key=lambda x: int(x.replace("frame", "").split('.')[0]))
+    for count in range(0, len(imgList)):
+        im_name = imgList[count]
+        im_path = os.path.join(dir, im_name)
+        print(im_path)
+    '''OLD_CATHEDRAL = Image.open("Seu Vella.jpg")
     print(colors.Color.GREEN + "Seu Vella (old cathedral)" + colors.Color.END)
     plt.imshow(OLD_CATHEDRAL)
     plt.show()
-    '''OLD_ENTRANCE = Image.open("Arc del pont.jpg")
+    OLD_ENTRANCE = Image.open("Arc del pont.jpg")
     print(colors.Color.GREEN + "Old entrance and Indíbil and Mandoni statue" + colors.Color.END)
     OLD_ENTRANCE.show()
     JEWISH_QUARTER = Image.open("Barri jueu.jpg")

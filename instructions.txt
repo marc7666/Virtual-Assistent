@@ -47,7 +47,9 @@ When the user indicates that he/she wants to go sightseeing, Charlie will print 
 show the most iconic places of the city.
 The name of the location is at the bottom left.
 To pass to the next picture click on the screen (inside the image window).
-IMPORTANT NOTE: TO BE AVAILABLE TO SEE THE PICTURES THE COMPUTES MUST HAVE INSTALLED 'FIM' LIBRARY.
+IMPORTANT NOTE: TO BE AVAILABLE TO SEE THE PICTURES THE COMPUTER MUST HAVE INSTALLED 'FIM' LIBRARY.
 If the computer doesn't have it, use this command to install it:
 $ sudo apt install fim
 The command works for Ubuntu operating systems.
+The first window opened is the touristic sides window. Once this window is closed, the gastronomycal window
+will be opened automatically.

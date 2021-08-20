@@ -7,11 +7,11 @@ Chat bot main code
 # Marc Cervera Rosell
 # Polytecnich school - University of Lleida
 # ****************************************
+import subprocess
 import urllib.parse
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import colors
-import subprocess
 
 
 # ******************* Auxiliar methods zone *******************

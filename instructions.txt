@@ -12,6 +12,7 @@ The program will answer => See you the next time!
 
 To start interacting with the bot you have to specify what do you want. You can pay a fine or present an allegation.
 Use one of these commands, as you need:
+ADVERTISEMENT: THE FIRST OPTION (PAY A FINE), INCLUDES THE OPTION TO PAY A TOWN HALL TAX
 -> I want to pay a fine
 -> I want to present an allegation to a fine
 -> I want to go sightseeing

@@ -14,7 +14,6 @@ To start interacting with the bot you have to specify what do you want. You can 
 Use one of these commands, as you need:
 -> I want to pay a fine
 -> I want to present an allegation to a fine
--> Town hall taxes and fines
 -> I want to go sightseeing
 
 When the bot asks you which type of fine do you want to pay:

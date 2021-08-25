@@ -7,14 +7,14 @@ Chat bot main code
 # Marc Cervera Rosell
 # Polytecnich school - University of Lleida
 # ****************************************
-import subprocess
 import urllib.parse
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import colors
 
-
 # ******************* Auxiliar methods zone *******************
+import sightseeing
+
 
 def print_instructions():
     """
@@ -142,11 +142,6 @@ while True:  # Communication flow
                                        '/ovt/EXPE/251203/ALLEIDA/noauth/cobro')
         print('https://' + TOWN_HALL)
     if str(REQUEST) == "I want to go sightseeing":
-        print(colors.Color.BLUE + "Link to the Lleida tourist office" + colors.Color.END)
-        TOURISM_OFFICE = urllib.parse.quote('www.turismedelleida.cat/')
-        print('https://' + TOURISM_OFFICE)
-        print(colors.Color.YELLOW + "Most important places of Lleida" + colors.Color.END)
-        print(colors.Color.YELLOW + "Gastronomy of Lleida" + colors.Color.END)
-        subprocess.call('./print_pictures.sh')
+        sightseeing.sightseeing_lleida()
     if str(ANSWER) == "See you the next time!":
         break

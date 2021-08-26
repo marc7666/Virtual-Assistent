@@ -11,6 +11,8 @@ lynt:
 	pylint tarragona_file.py
 	pylint dgt_fine.py
 	pylint dgt_allegation.py
+	pylint complaint_ord.py
+	pylint undeclared_tickets.py
 
 play:
 	python3 bot.py

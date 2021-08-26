@@ -18,8 +18,9 @@ ADVERTISEMENT: THE FIRST OPTION (PAY A FINE), INCLUDES THE OPTION TO PAY A TOWN 
 -> I want to go sightseeing
 
 When the bot asks you which type of fine do you want to pay:
--> Traffic ticket
+-> Traffic fine
 -> Town hall taxes and fines
+-> Tributary complaint
 
 ********** Traffic fine **********
 First of all, Charlie will ask if you live in Catalonia. You can answer:

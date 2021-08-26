@@ -12,6 +12,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import barcelona_file
 import colors
+import complaint_ord
 import dgt_allegation
 import dgt_fine
 import girona_file
@@ -24,6 +25,7 @@ import town_hall
 
 
 # ******************* Auxiliary methods zone *******************
+import undeclared_tickets
 
 
 def print_instructions():
@@ -78,5 +80,26 @@ while True:  # Communication flow
         town_hall.taxes_and_fines()
     if str(REQUEST) == "I want to go sightseeing":
         sightseeing.sightseeing_lleida()
+    if str(REQUEST) == "Tributary complaint":
+        COMPLAINT_TYPES = ["Ordinary complaint", "Undeclared invoices and tickets complaint",
+                           "Sales concealment software complaint",
+                           "e-commerce complaint and web fraud",
+                           "Real estate rental complaint"]
+
+        for index, type_c in enumerate(COMPLAINT_TYPES):
+            print(colors.Color.CYAN + type_c + colors.Color.END)
+        REQUEST = input('Me: ')  # Introduced by the user
+        ANSWER = CHATBOT.get_response(REQUEST)  # Bot's answer
+        print('Charlie: ', ANSWER)
+        if str(REQUEST) == "Ordinary":
+            complaint_ord.ordinary()
+        elif str(REQUEST) == "Undeclared invoices and tickets complaint":
+            undeclared_tickets.tickets()
+        elif str(REQUEST) == "Sales concealment software complaint":
+            pass
+        elif str(REQUEST) == "e-commerce complaint and web fraud":
+            pass
+        elif str(REQUEST) == "Real estate rental complaint":
+            pass
     if str(ANSWER) == "See you the next time!":
         sys.exit()

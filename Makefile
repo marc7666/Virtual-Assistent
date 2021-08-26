@@ -10,6 +10,7 @@ lynt:
 	pylint phone_payment.py
 	pylint tarragona_file.py
 	pylint dgt_fine.py
+	pylint dgt_allegation.py
 
 play:
 	python3 bot.py

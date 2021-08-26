@@ -8,14 +8,10 @@ Chat bot main code
 # Polytecnich school - University of Lleida
 # ****************************************
 import sys
-import urllib.parse
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-
 import barcelona_file
 import colors
-
-# ******************* Auxiliary methods zone *******************
 import dgt_allegation
 import dgt_fine
 import girona_file
@@ -25,6 +21,9 @@ import phone_payment
 import sightseeing
 import tarragona_file
 import town_hall
+
+
+# ******************* Auxiliary methods zone *******************
 
 
 def print_instructions():

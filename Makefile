@@ -9,6 +9,7 @@ lynt:
 	pylint lleida_file.py
 	pylint phone_payment.py
 	pylint tarragona_file.py
+	pylint dgt_fine.py
 
 play:
 	python3 bot.py

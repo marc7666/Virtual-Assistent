@@ -16,6 +16,8 @@ import barcelona_file
 import colors
 
 # ******************* Auxiliary methods zone *******************
+import dgt_allegation
+import dgt_fine
 import girona_file
 import internet_payment
 import lleida_file
@@ -70,18 +72,9 @@ while True:  # Communication flow
     if str(REQUEST) == "Via internet":  # This way is for persons who live in Catalonia
         internet_payment.cat_int_pay()
     if str(REQUEST) == "No":  # Persons who not live in Catalonia
-        print(colors.Color.BLUE + "Link of the 'Dirección general de tráfico' web to pay a fine"
-              + colors.Color.END)
-        DGT = urllib.parse.quote('sede.DGT.gob.es/es/multas/paga-tu-multa/')
-        print('https://' + DGT)
+        dgt_fine.traffic_dgt()
     if str(REQUEST) == "I want to present an allegation to a fine":
-        print(
-            colors.Color.BLUE + "Link of the 'Dirección general de tráfico' web "
-                                "to present an allegation"
-            + colors.Color.END)
-        ALLEGATION_DGT = urllib.parse.quote(
-            'sede.DGT.gob.es/es/multas/presenta-una-alegacion-o-recurso/')
-        print('https://' + ALLEGATION_DGT)
+        dgt_allegation.allegation()
     if str(REQUEST) == "Town hall taxes and fines":  # The link of the town hall can be changed
         town_hall.taxes_and_fines()
     if str(REQUEST) == "I want to go sightseeing":

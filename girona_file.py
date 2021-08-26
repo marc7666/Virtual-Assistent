@@ -1,15 +1,21 @@
-import colors
+"""
+Girona information file
+"""
 import urllib
+import colors
 
 
 def traffic_girona():
+    """
+    This function prints the links of Girona
+    """
     print(colors.Color.BLUE + "Citizen attention office of Girona link: "
           + colors.Color.END)
-    GIRONA_ATTENTION = urllib.parse.quote(
+    girona_attention = urllib.parse.quote(
         'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=17461')
-    print('http://' + GIRONA_ATTENTION)
+    print('http://' + girona_attention)
     print(colors.Color.BLUE + "Territorial traffic service of Girona link: "
           + colors.Color.END)
-    GIRONA_SERVICE = urllib.parse.quote(
+    girona_service = urllib.parse.quote(
         'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=9715')
-    print('http://' + GIRONA_SERVICE)
+    print('http://' + girona_service)

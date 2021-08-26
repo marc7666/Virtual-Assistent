@@ -1,15 +1,21 @@
-import colors
+"""
+Barcelona information file
+"""
 import urllib
+import colors
 
 
 def traffic_barcelona():
+    """
+    This function prints the links of Barcelona
+    """
     print(colors.Color.BLUE + "Citizen attention office of Barcelona link: "
           + colors.Color.END)
-    BARCELONA_ATTENTION = urllib.parse.quote(
+    barcelona_attention = urllib.parse.quote(
         'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=6622')
-    print('http://' + BARCELONA_ATTENTION)
+    print('http://' + barcelona_attention)
     print(colors.Color.BLUE + "Territorial traffic service of Barcelona link: "
           + colors.Color.END)
-    BARCELONA_SERVICE = urllib.parse.quote(
+    barcelona_service = urllib.parse.quote(
         'sac.gencat.cat/sacgencat/AppJava/organisme_fitxa.jsp?codi=10995')
-    print('http://' + BARCELONA_SERVICE)
+    print('http://' + barcelona_service)

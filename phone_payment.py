@@ -1,5 +1,8 @@
-import colors
+"""
+Phone payment file
+"""
 import urllib
+import colors
 
 
 def print_phone_information():
@@ -13,7 +16,10 @@ def print_phone_information():
 
 
 def cat_012():
+    """
+    This function prints the information of 012 telephone
+    """
     print(colors.Color.BLUE + "Check the 012 opening hours:" + colors.Color.END)
-    OPENING_HOURS = urllib.parse.quote('web.gencat.cat/ca/contacte/012/')
-    print('http://' + OPENING_HOURS)
+    opening_hours = urllib.parse.quote('web.gencat.cat/ca/contacte/012/')
+    print('http://' + opening_hours)
     print_phone_information()

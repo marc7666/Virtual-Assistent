@@ -16,6 +16,7 @@ ADVERTISEMENT: THE FIRST OPTION (PAY A FINE), INCLUDES THE OPTION TO PAY A TOWN 
 -> I want to pay a fine
 -> I want to present an allegation to a fine
 -> I want to go sightseeing
+-> Addresses and telephone numbers of the tax agency
 
 When the bot asks you which type of fine do you want to pay:
 -> Traffic fine

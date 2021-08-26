@@ -10,6 +10,8 @@ Chat bot main code
 import sys
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+
+import address_and_tels
 import barcelona_file
 import cash_payments
 import colors
@@ -107,5 +109,7 @@ while True:  # Communication flow
             property_rental.rental()
         elif str(REQUEST) == "Reporting cash payments":
             cash_payments.cash()
+    if str(REQUEST) == "Addresses and telephone numbers of the tax agency":
+        address_and_tels.tax_agency_info()
     if str(ANSWER) == "See you the next time!":
         sys.exit()

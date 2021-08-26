@@ -17,6 +17,7 @@ lynt:
 	pylint cash_payments.py
 	pylint e_commerce.py
 	pylint property_rental.py
+	pylint address_and_tels.py
 
 play:
 	python3 bot.py

@@ -13,6 +13,10 @@ lynt:
 	pylint dgt_allegation.py
 	pylint complaint_ord.py
 	pylint undeclared_tickets.py
+	pylint software_complaint.py
+	pylint cash_payments.py
+	pylint e_commerce.py
+	pylint property_rental.py
 
 play:
 	python3 bot.py

@@ -22,6 +22,15 @@ When the bot asks you which type of fine do you want to pay:
 -> Town hall taxes and fines
 -> Tributary complaint
 
+********** Tributary complaints **********
+There are 6 types of tributary complaints:
+-> Ordinary complaint
+-> Reporting undeclared invoices and receipts
+-> Allegation of sales suppression software
+-> Allegation of e-commerce and online fraud
+-> Allegation of property rental
+-> Reporting cash payments
+
 ********** Traffic fine **********
 First of all, Charlie will ask if you live in Catalonia. You can answer:
 -> Yes

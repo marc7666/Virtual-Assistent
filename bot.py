@@ -11,21 +11,25 @@ import sys
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import barcelona_file
+import cash_payments
 import colors
 import complaint_ord
 import dgt_allegation
 import dgt_fine
+import e_commerce
 import girona_file
 import internet_payment
 import lleida_file
 import phone_payment
+import property_rental
 import sightseeing
+import software_complaint
 import tarragona_file
 import town_hall
+import undeclared_tickets
 
 
 # ******************* Auxiliary methods zone *******************
-import undeclared_tickets
 
 
 def print_instructions():
@@ -81,10 +85,10 @@ while True:  # Communication flow
     if str(REQUEST) == "I want to go sightseeing":
         sightseeing.sightseeing_lleida()
     if str(REQUEST) == "Tributary complaint":
-        COMPLAINT_TYPES = ["Ordinary complaint", "Undeclared invoices and tickets complaint",
-                           "Sales concealment software complaint",
-                           "e-commerce complaint and web fraud",
-                           "Real estate rental complaint"]
+        COMPLAINT_TYPES = ["Ordinary complaint", "Reporting undeclared invoices and receipts",
+                           "Allegation of sales suppression software",
+                           "Allegation of e-commerce and online fraud",
+                           "Allegation of property rental", "Reporting cash payments"]
 
         for index, type_c in enumerate(COMPLAINT_TYPES):
             print(colors.Color.CYAN + type_c + colors.Color.END)
@@ -93,13 +97,15 @@ while True:  # Communication flow
         print('Charlie: ', ANSWER)
         if str(REQUEST) == "Ordinary":
             complaint_ord.ordinary()
-        elif str(REQUEST) == "Undeclared invoices and tickets complaint":
+        elif str(REQUEST) == "Reporting undeclared invoices and receipts":
             undeclared_tickets.tickets()
-        elif str(REQUEST) == "Sales concealment software complaint":
-            pass
-        elif str(REQUEST) == "e-commerce complaint and web fraud":
-            pass
-        elif str(REQUEST) == "Real estate rental complaint":
-            pass
+        elif str(REQUEST) == "Allegation of sales suppression software":
+            software_complaint.software_sales()
+        elif str(REQUEST) == "Allegation of e-commerce and online fraud":
+            e_commerce.web_fraud()
+        elif str(REQUEST) == "Allegation of property rental":
+            property_rental.rental()
+        elif str(REQUEST) == "Reporting cash payments":
+            cash_payments.cash()
     if str(ANSWER) == "See you the next time!":
         sys.exit()

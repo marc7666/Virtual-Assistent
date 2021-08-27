@@ -21,3 +21,8 @@ lynt:
 
 play:
 	python3 bot.py
+
+
+all:
+	make lynt
+	make play

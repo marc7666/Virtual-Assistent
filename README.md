@@ -1,6 +1,4 @@
-# Basic ChatBot
-
-## USER MANUAL
+# USER MANUAL
 You're going to see the different commands to interact with the ChatBot.
 First, you'll see the commands that you can write and second the answers of the bot.
 

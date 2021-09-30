@@ -1,12 +1,12 @@
-# Charlie's user manual
+**************************************** Charlie's user manual ****************************************
 You're going to see the different commands to interact with the ChatBot.
 First, you'll see the commands that you can write and second the answers of the bot.
 
-##  Greetings 
+********** Greetings **********
 Hi, Hello, Hey man, What's up? Good to see you
 The program will answer => Hello, welcome to the virtual assistant
 
-##  Goodbyes 
+********** Goodbyes **********
 Bye, See you, See you soon, Bye bye, Goodbye
 The program will answer => See you the next time!
 
@@ -23,7 +23,7 @@ When the bot asks you which type of fine do you want to pay:
 -> Town hall taxes and fines
 -> Tributary complaint
 
-##  Tributary complaints 
+********** Tributary complaints **********
 There are 6 types of tributary complaints:
 -> Ordinary complaint
 -> Reporting undeclared invoices and receipts
@@ -32,7 +32,7 @@ There are 6 types of tributary complaints:
 -> Allegation of property rental
 -> Reporting cash payments
 
-##  Traffic fine 
+********** Traffic fine **********
 First of all, Charlie will ask if you live in Catalonia. You can answer:
 -> Yes
 -> No
@@ -48,12 +48,12 @@ In case to choose the way 'In person', Charlie will request in which province do
 -> Girona
 -> Tarragona
 
-##  Town hall taxes and fines 
+********** Town hall taxes and fines **********
 You can to pay any tax or fine imposed by the town hall of your city.
 When you press the return key, Charlie will print the link of your town hall
 (The default town hall is Lleida)
 
-##  Sightseeing 
+********** Sightseeing **********
 When the user indicates that he/she wants to go sightseeing, Charlie will print the tourism office link and will
 show the most iconic places of the city.
 The name of the location is at the bottom left.
